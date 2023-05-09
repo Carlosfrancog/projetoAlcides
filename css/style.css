@@ -278,9 +278,60 @@ footer img{
 	object-fit: contain;  
 }
   
-  
 .carousel-container {
 	  position: relative;
 }
   
+.form-contato {
+	background-color: #ccc; /* Cor de fundo cinza */
+	border-radius: 10px; /* Bordas redondas */
+	margin: 0 auto; /* Centraliza horizontalmente */
+	padding: 20px; /* Espaçamento interno */
+	width: 80%; /* Largura do formulário */
+}
+
+.form-contato label {
+	display: block; /* Coloca cada label em uma linha */
+	font-weight: bold; /* Deixa o texto em negrito */
+	margin-bottom: 10px; /* Espaçamento entre as labels */
+}
   
+.form-contato input[type="text"],
+.form-contato input[type="tel"],
+.form-contato input[type="email"],
+.form-contato textarea {
+	border-radius: 5px; /* Bordas arredondadas */
+	box-sizing: border-box; /* Evita que o tamanho seja afetado pela borda */
+	display: block; /* Coloca cada input em uma linha */
+	font-size: 16px; /* Tamanho da fonte */
+	margin-bottom: 20px; /* Espaçamento entre os inputs */
+	padding: 10px; /* Espaçamento interno */
+	width: 100%; /* Largura total */
+}
+  
+.form-contato input[type="submit"] {
+	background-color: #4CAF50; /* Cor de fundo verde */
+	border: none; /* Sem borda */
+	border-radius: 5px; /* Bordas arredondadas */
+	color: white; /* Texto branco */
+	cursor: pointer; /* Muda o cursor ao passar por cima */
+	font-size: 16px; /* Tamanho da fonte */
+	padding: 10px 20px; /* Espaçamento interno */
+}
+
+@media screen and (max-width: 480px) {
+	.form-contato {
+		width: 100%;
+	}
+
+	.form-contato input[type="text"],
+	.form-contato input[type="tel"],
+	.form-contato input[type="email"],
+	.form-contato textarea {
+		margin-bottom: 10px;
+	}
+
+	.form-contato input[type="submit"] {
+		margin-top: 10px;
+	}
+}
