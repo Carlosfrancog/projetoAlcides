@@ -2,37 +2,118 @@ html {
 	scroll-behavior: smooth;
   }
   
-  html,
-  body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	background-color: #ccc;
 	font-family: Arial, Helvetica, sans-serif;
-  }
+}
   
-  header {
+header {
 	background-color: #3193d4;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
-  }
+}
   
-  header img {
+header img {
 	height: 50px;
 	margin-right: 10px;
-  }
+}
   
-  header h1 {
-	color: white;
+header h1 {
+	color: rgb(255, 255, 255);
 	font-family: Arial, sans-serif;
 	font-size: 28px;
 	margin: 0;
-  }
+}
 
+#burguer{
+    display: none;
+}
 
-  footer{
+@media screen and (max-width: 768px) {
+    #burguer {
+        display: block;
+    }
+}
+
+menu {
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a09e9e;
+    border-radius: 20px;
+}
+
+menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+menu li {
+    margin-right: 20px;
+}
+
+menu a {
+    display: block;
+    color: #f00;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+menu a:hover {
+    background-color: rgb(110, 104, 104);
+    color: #3498db;
+}
+
+@media screen and (max-width: 768px) {
+    menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    menu ul{
+        flex-direction: column;
+        text-align: left;
+    }
+
+    menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.material-symbols-outlined {
+    background-color: #777676;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.material-symbols-outlined:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+footer{
     display: flex;
     background: #777676;
     align-items: center;
@@ -71,7 +152,6 @@ footer img{
    width: 90px;
 }
 
-/* Formatação para telas pequenas */
 @media screen and (max-width: 767px) {
 	footer {
 	  flex-wrap: wrap;
@@ -106,172 +186,4 @@ footer img{
 	  font-size: 24px;
 	  margin-right: 15px;
 	}
-  }  
-  
-  nav {
-	max-width: 960px;
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #ccc;
-	border-radius: 20px;
-  }
-  
-  section {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-  }
-  
-  section h3 {
-	width: 100%;
-	text-align: center;
-  }
-  
-  section li img{
-	width: 50%;
-
-  }
-
-  section li {
-	
-	position: relative;
-	padding: 10px;
-	text-align: center;
-	width: calc(25% - 10px);
-	margin-right: 0;
-	margin-bottom: 10px;
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 0;
-  }
-  
-
-  figcaption {
-	display: block;
-	position: absolute; /* adicione essa propriedade */
-	border-radius: 20px;
-	bottom: 0; /* adicione essa propriedade */
-	left: 0; /* adicione essa propriedade */
-	width: 100%; /* adicione essa propriedade */
-	background-color: rgba(0, 0, 0, 0.7); /* adicione essa propriedade */
-	color: #fff; /* adicione essa propriedade */
-	padding: 5px; /* adicione essa propriedade */
-	font-size: 14px; /* adicione essa propriedade */
-	text-align: center; /* adicione essa propriedade */
-  }
-
-  @media only screen and (max-width: 600px) {
-	section li {
-	position: relative;
-	width: 100%;
-	}
-	
-	section li img {
-	width: 100%;
-	}
-	
-	figcaption {
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-	color: #fff;
-	padding: 5px;
-	font-size: 14px;
-	text-align: center;
-	position: static; /* remover a posição absoluta */
-	}
-	}
-
-  nav ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	display: flex;
-  }
-  
-  nav li {
-	margin-right: 20px;
-  }
-  
-  nav a {
-	display: block;
-	color: #f00;
-	font-size: 20px;
-	text-decoration: none;
-	padding: 10px;
-	border-radius: 20px;
-  }
-  
-  nav a:hover {
-	background-color: rgb(110, 104, 104);
-	color: #3498db;
-  }
-  
-  /* Formatação para telas pequenas */
-  @media screen and (max-width: 768px) {
-	nav {
-	  flex-direction: column;
-	  align-items: flex-start;
-	}
-  
-	nav ul {
-	  flex-direction: column;
-	  text-align: left;
-	}
-  
-	nav li {
-	  margin-right: 0;
-	  margin-bottom: 10px;
-	}
-  
-	/* Estilização do ícone de menu sanduíche */
-	.menu-icon {
-	  display: block;
-	  position: absolute;
-	  top: 10px;
-	  right: 10px;
-	  font-size: 24px;
-	  cursor: pointer;
-	  z-index: 2;
-	}
-  
-	/* Ocultar a lista de navegação quando o menu sanduíche estiver ativo */
-	.menu-icon.active + nav ul {
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		top: 60px;
-		left: 0;
-		right: 0;
-		padding: 10px;
-		background-color: #ccc;
-		z-index: 1;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	  }
-  
-	/* Estilização do X (fechar) no menu sanduíche */
-	.menu-icon.active .bar1 {
-	  transform: rotate(-45deg) translate(-4px, 4px);
-	}
-  
-	.menu-icon.active .bar2 {
-	  opacity: 0;
-	}
-  
-	.menu-icon.active .bar3 {
-	  transform: rotate(45deg) translate(-4px, -4px);
-	}
-  
-	/* Animação do X (fechar) no menu sanduíche */
-	.bar {
-	  width: 35px;
-	  height: 5px;
-	  background-color: #f00;
-	  margin: 6px 0;
-	  transition: 0.4s;
-	}
-  }
-  
+}

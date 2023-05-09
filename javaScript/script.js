@@ -1,7 +1,7 @@
-const menuIcon = document.querySelector('.menu-icon');
-const navList = document.querySelector('nav ul');
-
-menuIcon.addEventListener('click', () => {
-  menuIcon.classList.toggle('active');
-  navList.classList.toggle('active');
-});
+function clickMenu() {
+  if (itens.style.display == 'block') {
+    itens.style.display = 'none'
+  } else {
+    itens.style.display = 'block'
+  }
+}
